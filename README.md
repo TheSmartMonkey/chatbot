@@ -18,6 +18,8 @@ Supinfo school project on the implementation of a chatbot
 
 3. Select you chatbot
 
+![chatbot learn](https://raw.githubusercontent.com/TheSmartMonkey/myHome/master/images/chatbot_learn.png)
+
 ## Implemented AI
 
 ### chatbotScripted.py
