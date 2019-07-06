@@ -1,0 +1,131 @@
+{
+    "start": {
+        "say": "Hello what's you name?",
+        "answers": [
+            {
+                "match": "@user",
+                "goto": "what"
+            }
+        ]
+    },
+    "what": {
+        "say": "What do you want to do?",
+        "description": "Start over",
+        "answers": [
+            {
+                "match": "go to @city_arrival",
+                "goto": "choose_city_departure"
+            },
+            {
+                "match": "leave from @city_departure",
+                "goto": "choose_city_arrival"
+            },
+            {
+                "match": "restart",
+                "goto": "start"
+            },
+            {
+                "match": "exit",
+                "goto": "exit"
+            },
+            {
+                "match": "bye",
+                "goto": "exit"
+            },
+            {
+                "match": "fly to @city_arrival",
+                "goto": "choose_city_departure"
+            }
+        ]
+    },
+    "choose_city_departure": {
+        "say": "From Where do you want to leave?",
+        "description": "Choose a departure city",
+        "answers": [
+            {
+                "match": "@city_departure",
+                "goto": "flight_reservation"
+            },
+            {
+                "match": "restart",
+                "goto": "what"
+            },
+            {
+                "match": "exit",
+                "goto": "exit"
+            },
+            {
+                "match": "bye",
+                "goto": "exit"
+            }
+        ]
+    },
+    "choose_city_arrival": {
+        "say": "Where do you want to go?",
+        "description": "Choose a arrival city",
+        "answers": [
+            {
+                "match": "@city_arrival",
+                "goto": "flight_reservation"
+            },
+            {
+                "match": "restart",
+                "goto": "what"
+            },
+            {
+                "match": "exit",
+                "goto": "exit"
+            },
+            {
+                "match": "bye",
+                "goto": "exit"
+            }
+        ]
+    },
+    "flight_reservation": {
+        "say": "Are you sure you want to book a flight from @city_departure to @city_arrival?",
+        "answers": [
+            {
+                "match": "yes",
+                "goto": "exit"
+            },
+            {
+                "match": "no",
+                "goto": "what"
+            },
+            {
+                "match": "restart",
+                "goto": "what"
+            },
+            {
+                "match": "exit",
+                "goto": "exit"
+            },
+            {
+                "match": "bye",
+                "goto": "exit"
+            }
+        ]
+    },
+    "dont_understand": {
+        "say": "I don't understand?",
+        "answers": [
+            {
+                "match": "",
+                "goto": "exit"
+            },
+            {
+                "match": "bye",
+                "goto": "exit"
+            },
+            {
+                "match": "exit",
+                "goto": "exit"
+            },
+            {
+                "match": "restart",
+                "goto": "what"
+            }
+        ]
+    }
+}
